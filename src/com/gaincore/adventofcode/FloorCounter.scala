@@ -5,19 +5,31 @@ package com.gaincore.adventofcode
   */
 class FloorCounter {
 
-  private var counter = 0
+  private var floor = 0
+  private var basementFlag = false
+  private var moveCounter = 0
+  private var basementMovePosition = 0
 
   def parentheses(c: Char) = {
+    this.moveCounter += 1
     if (c == '(') {
-      this.counter += 1
+      this.floor += 1
     }
-    if (c == ')') {
-      this.counter -= 1
+    else if (c == ')') {
+      this.floor -= 1
+      if (this.basementFlag.equals(false) && this.floor.<(0)) {
+        this.basementFlag = true
+        this.basementMovePosition = this.moveCounter
+      }
     }
   }
 
-  def getCounter = {
-    this.counter
+  def getFinalFloor = {
+    this.floor
+  }
+
+  def getBasementPosition = {
+    this.basementMovePosition
   }
 
 }
