@@ -16,7 +16,7 @@ object Day02Challenge01 {
       line => wrapper.wrap(line.split("x").map(_.toInt))
     }
 
-    println("Elves will need " + wrapper.getTotalPaper + " square feet of wrapping paper.")
+    println("Elves will need " + wrapper.getTotalPaper + " square feet of wrapping paper and " + wrapper.getTotalRibbon + " feet of ribbon.")
   }
 
 }
