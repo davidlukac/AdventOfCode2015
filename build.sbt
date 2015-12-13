@@ -1,6 +1,8 @@
 name := "Advert of Code 2015"
 
-version := "0.1"
+organization := "com.gaincore"
+
+version := "0.1.0"
 
 scalaVersion := "2.11.7"
 
