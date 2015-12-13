@@ -3,7 +3,7 @@ package com.gaincore.adventofcode
 import scala.util.Sorting
 
 /**
-  * Created by davidlukac on 12/12/15.
+  * Created by David Lukac on 12/12/15.
   */
 class WrapperCalculator {
 

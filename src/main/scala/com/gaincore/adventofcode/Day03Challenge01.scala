@@ -3,16 +3,16 @@ package com.gaincore.adventofcode
 import scala.io.Source
 
 /**
-  * Created by davidlukac on 13/12/15.
+  * Created by David Lukac on 13/12/15.
   */
 object Day03Challenge01 {
 
   def main(args: Array[String]) {
-    val file = "assets/input_03-01.txt"
+    val file = "/input_03-01.txt"
 
     val nav = new HouseNavigator
 
-    Source.fromFile(file).foreach {
+    Source.fromInputStream(getClass.getResourceAsStream(file)).foreach {
       c => nav.navigate(c)
     }
 

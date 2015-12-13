@@ -1,7 +1,7 @@
 package com.gaincore.adventofcode
 
 /**
-  * Created by davidlukac on 13/12/15.
+  * Created by David Lukac on 13/12/15.
   */
 class XYPosition(xc: Int, yc: Int) {
 
