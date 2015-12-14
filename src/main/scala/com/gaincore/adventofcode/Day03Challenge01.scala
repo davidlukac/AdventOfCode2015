@@ -16,7 +16,8 @@ object Day03Challenge01 {
       c => nav.navigate(c)
     }
 
-    println("When Santa was alone, " + nav.getSingleVisits.toString + " houses got at least one present")
+    println("Day 03")
+    println("  Puzzle 01: When Santa was alone, " + nav.getSingleVisits.toString + " houses got at least one present")
   }
 
 }
