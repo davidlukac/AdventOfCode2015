@@ -16,20 +16,31 @@ class HouseNavigator {
   houses(new XYPosition(Santa.position)) = 1
 
   // Implementation support for RoboSanta.
-  private val Santa2 = new DeliveryMan
-  private val RoboSanta = new DeliveryMan
+  private val santa2 = new DeliveryMan("Santa")
+  private val roboSanta = new DeliveryMan("RoboSanta")
   private val housesWithRoboSanta = mutable.Map[XYPosition, Int]()
+  private val dispatch = new NorthPoleDispatch(List(santa2, roboSanta))
 
-  housesWithRoboSanta(new XYPosition(Santa2.position)) = 2
+  housesWithRoboSanta(new XYPosition(santa2.position)) = 2
 
   def navigate(c: Char): Unit = {
     c match {
       case '^' => {
         Santa.position.goNorth
+        dispatch.nextMan.position.goNorth
       }
-      case '>' => Santa.position.goEast
-      case '<' => Santa.position.goWest
-      case 'v' => Santa.position.goSouth
+      case '>' => {
+        Santa.position.goEast
+        dispatch.nextMan.position.goEast
+      }
+      case '<' => {
+        Santa.position.goWest
+        dispatch.nextMan.position.goWest
+      }
+      case 'v' => {
+        Santa.position.goSouth
+        dispatch.nextMan.position.goSouth
+      }
     }
 
     // Placing gifts to house - Santa is alone.
@@ -44,9 +55,9 @@ class HouseNavigator {
     }
 
     // Placing gifts to house - RoboSanta is helping Santa.
-    if (houses.get(Santa.position).isEmpty) {
+    if (housesWithRoboSanta.get(dispatch.currentMan.position).isEmpty) {
       // Creating new house.
-//      houses(new XYPosition(Santa.position)) = 1
+      housesWithRoboSanta(new XYPosition(dispatch.currentMan.position)) = 1
     }
     else {
       // Increment number of visits.
@@ -57,6 +68,10 @@ class HouseNavigator {
 
   def getSingleVisits = {
     this.houses.size
+  }
+
+  def getRoboAndSantaVisits = {
+    this.housesWithRoboSanta.size
   }
 
 }
