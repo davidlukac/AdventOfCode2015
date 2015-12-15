@@ -9,6 +9,7 @@ object AdventOfCode2015 {
     Day01Challenge01.main(null)
     Day02Challenge01.main(null)
     Day03Challenge01.main(null)
+    Day04Challenge01.main(null)
   }
 
 }

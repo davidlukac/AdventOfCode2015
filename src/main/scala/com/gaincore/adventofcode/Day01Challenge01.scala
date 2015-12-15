@@ -17,8 +17,8 @@ object Day01Challenge01 {
     }
 
     println("Day 01")
-    println("  Puzzle 01: The final floor is: " + counter.getFinalFloor)
-    println("  Puzzle 02: For the 1st time we went to basement on move number: " + counter.getBasementPosition)
+    println("  Puzzle 01: The final floor is: " + counter.getFinalFloor + ".")
+    println("  Puzzle 02: For the 1st time we went to basement on move number: " + counter.getBasementPosition + ".")
   }
 
 }

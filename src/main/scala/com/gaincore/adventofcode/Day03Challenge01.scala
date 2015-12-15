@@ -17,8 +17,8 @@ object Day03Challenge01 {
     }
 
     println("Day 03")
-    println("  Puzzle 01: When Santa was alone, " + nav.getSingleVisits.toString + " houses got at least one present")
-    println("  Puzzle 02: With RoboSanta " + nav.getRoboAndSantaVisits.toString + " houses got at least one present")
+    println("  Puzzle 01: When Santa was alone, " + nav.getSingleVisits.toString + " houses got at least one present.")
+    println("  Puzzle 02: With RoboSanta " + nav.getRoboAndSantaVisits.toString + " houses got at least one present.")
   }
 
 }

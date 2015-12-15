@@ -21,7 +21,7 @@ object Day04Challenge01 {
     val answer2 = getRawPuzzle01(input, "000000")
     println("Day 04")
     println(s"  Puzzle 01: The 2nd input part for `$input` is: `$answer1`.")
-    println(s"  Puzzle 02: The 2nd input part for `$input` is: `$answer2`.")
+    println(s"  Puzzle 02: The 2nd input part for `$input` with 6 leading zeroes in the hash is: `$answer2`.")
   }
 
   def main(args: Array[String]) {
