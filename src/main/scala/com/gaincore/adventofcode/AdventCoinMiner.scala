@@ -6,7 +6,7 @@ import java.security.MessageDigest
 import scala.annotation.tailrec
 
 /**
-  * Created by davidlukac on 15/12/15.
+  * Created by David Lukac on 15/12/15.
   */
 class AdventCoinMiner {
 
@@ -30,7 +30,7 @@ class AdventCoinMiner {
     // Make sure the HEX string has leading zeroes.
     val hexStringHash: String = f"$hashBigInt%032x"
 
-//    if ((number % 1) == 0) println(s"N is: $number, input string is: $inputString, hash is: $hexStringHash")
+    // if ((number % 1) == 0) println(s"N is: $number, input string is: $inputString, hash is: $hexStringHash")
 
     if (hashIsCorrect(hexStringHash)) {
       number

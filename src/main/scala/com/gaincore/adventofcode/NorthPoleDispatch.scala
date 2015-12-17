@@ -1,5 +1,7 @@
 package com.gaincore.adventofcode
 
+import scala.annotation.tailrec
+
 /**
   * Created by David Lukac on 13/12/15.
   *
@@ -11,7 +13,7 @@ class NorthPoleDispatch(lc: List[DeliveryMan]) {
   private var it: Iterator[DeliveryMan] = deliveryMen.iterator
   var currentMan: DeliveryMan = deliveryMen.head
 
-  def nextMan: DeliveryMan = {
+  @tailrec final def nextMan: DeliveryMan = {
     if (it.hasNext) {
       currentMan = it.next()
       currentMan
